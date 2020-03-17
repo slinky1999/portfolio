@@ -1,150 +1,207 @@
-.menu{
+.menu {
     width: 100%;
     height: 100%;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    
+    display: flex;
+    align-items:flex-start;
+    flex-direction: row-reverse;
     
 }
 
 body {
-    
-   background-color: #201f24;
+    display: flex;
+    flex-direction: column;
+    background-color: #201f24;
 }
 
 
-
-.listeMenu{
-    opacity:0;
+.listeMenu {
+    opacity: 0;
+    -webkit-opacity: opacity(0);
     width: 100%;
-    height: 100%;
-    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    height: 100vh;
+    /*Propriété comme item flex - peut s'étirer en hauteur*/
+    flex: 0 1 auto;
     list-style-type: none;
-    font-size: calc(2em + 1vw);
+    font-size: calc(1.5em + 1vw);
     font-family: myriad-pro, sans-serif;
     font-weight: 700;
     font-style: normal;
-    padding: 5%;
     background-color: #3c2194;
     text-decoration: none;
-    transition-property: opacity;
-    transition-duration: 1s;
-    transition-timing-function: ease;
     color: white;
+    transition-property: ease-in-out opacity;
+    transition-duration: 1s;
+    
 }
 
-.choixMenu{
-    margin: 50px;
+.choixMenu {
+    text-align: center;
     opacity: 0;
     text-align: left;
-    
+    -webkit-opacity: opacity(0);
+    transition-property: ease-in-out opacity;
+    transition-duration: 1s;
+    cursor: pointer;
+    visibility: hidden;
 }
 
 
 #checkMenu:checked ~ #btnMenu {
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
-    transition-property: ease-in-out transform;
+    transition-property: ease-in-out rotate;
     transition-duration: 1s;
-    
-    
-  }
+}
 
 
-  #checkMenu:checked ~ ul {
+#checkMenu:checked ~ .listeMenu {
+    -webkit-opacity: opacity(1);
     opacity: 1;
-    transition-property: ease-in-out transform;
+    transition-property: ease-out opacity;
     transition-duration: 1s;
-   }
+}
 
-   #checkMenu:checked ~ ul > li {
+#checkMenu:checked ~ ul > li {
+    -webkit-opacity: opacity(1);
     opacity: 1;
-  }
+    transition-property: ease-out opacity;
+    transition-duration: 1s;
+    visibility: visible;
+}
 
-  #checkMenu {
+#checkMenu {
     display: none;
-  }
+}
 
- .choixMenu:hover{
-        color: #e0893d;
-        transition-property: color;
-        transition-duration: 1s;
+.choixMenu:hover {
+    color: #e0893d;
+    transition: 0.5s;
+}
+
+    .choixMenu {
+        opacity: 0;
+        margin: 60px;
+        text-align: center;
+        text-align: left;
+       
     }
 
-/*Styles mobiles*/
-@media (max-width:540px) {
-
-    .listeMenu{
-        font-size: calc(2em + 1vw);
-    }
-    
-    .choixMenu{
-        opacity: 1;
-        transition-property: opacity;
-        transition-duration: 1s;
-    }
-    
-     .menuBarre{
-        background-color:#3c2194; 
+    .menuBarre {
+        background-color: #3c2194;
         width: 100%;
         height: 10%;
         position: fixed;
-         
+
     }
-    
+ 
     #btnMenu {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-    transition-property: ease-in-out transform;
-    transition-duration: 1s;
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        transition-property: ease-in-out rotate;
+        transition-duration: 1s;
+        font-size: 3em;
+        position: fixed;
+        z-index: 2;
+        color: white;
+        cursor: pointer;
+    }
+
+ #btnMenu:checked {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+        transition-property: ease-out rotate;
+        transition-duration: 1s;
+    }
+
+
+.icones {
+    opacity: 0;
     font-size: 3em;
-    position: fixed;
-    z-index: 2;  
+    white-space: nowrap;
     color: white;
-    margin: 3% 0% 0% 85%;
-  }
+    flex-shrink: 0;
+    position: fixed;
+    -webkit-opacity: opacity(0);
+    transition-property: ease-in-out opacity;
+    transition-duration: 1s;
+    cursor: pointer;
+    visibility: hidden;
+}
 
+#checkMenu:checked ~ .icones {
+    -webkit-opacity: opacity(1);
+    opacity: 1;
+    transition-property: ease-out opacity;
+    transition-duration: 1s;
+    visibility: visible;
+}
 
-  }
+a {
+    text-decoration: none;
+    color: inherit;
+   
+}
+
+#checkMenu:checked ~ .icones > a:hover {
+    color: #e0893d;
+    transition: 0.5s;
+}
 
 /*Styles tablette*/
 @media (min-width:541px) and (max-width:1199px) {
     
+      .choixMenu {
+    margin: 100px auto;
+    text-align: center;
+    opacity: 0;
+    text-align: left;
+
+}
     
 }
 
-/*Style grand écran*/  
+/*Style grand écran*/
 @media (min-width:1200px) {
-  
-    .listeMenu{
-        font-size: calc(2em + 1vw);
+    
+    .menu{
+        
+        flex-direction: row;
     }
     
-    .choixMenu{
-        opacity: 1;
-        transition-property: opacity;
-        transition-duration: 1s;
+    .listeMenu {
+        width: 70vh;
+        flex: 1 0 auto;
+       
     }
     
-     .menuBarre{
-        background-color:#3c2194; 
-        width: 6%;
-        height: 100%;
-        position: fixed;
-         
-    }
-    
-    #btnMenu {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-    transition-property: ease-in-out transform;
-    transition-duration: 1s;
-    font-size: 4em;
+    .menuBarre {
+    background-color: #3c2194;
+    width: 7%;
+    height: 100%;
     position: fixed;
-    z-index: 2;  
-    color: white;
-    margin: 15% 1% 0% 1.5%;
-  }
+
+    }
+    
+    #checkMenu:checked ~ .elementsMenu {
+    width: 33%;
+}
+
+    .choixMenu {
+    padding-right: 50px;
+    white-space: nowrap;
+    } 
+
+    
+    .icones {
+    white-space: pre-line;
+    visibility: hidden;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
+}
 }

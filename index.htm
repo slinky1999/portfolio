@@ -5,36 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://use.typekit.net/bdx4nxg.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="dist/hamburgers.css">
+    <script src="https://kit.fontawesome.com/5134b43bb4.js" crossorigin="anonymous"></script>
     <title>TP1 - Application</title>
 </head>
 <body>
-
+   
     <header>
         <section class="menuBarre">
           <nav class="menu">
-            <input id="checkMenu" type="checkbox">
-            <label id="btnMenu" for="checkMenu">&#9776;</label>
+              <input id="checkMenu" type="checkbox">
+              <label id="btnMenu" for="checkMenu"><i id="icons" class="fas fa-bars"></i></label>
             <ul class="listeMenu">
                 <li class="choixMenu"><a>Accueil</a></li>
-                <li class="choixMenu"><a>Produits</a></li>
-                <li class="choixMenu"><a>À propos</a></li>
+                <li class="choixMenu"><a>Projets</a></li>
+                <li class="choixMenu"><a class="aPropos">Services</a></li>
                 <li class="choixMenu"><a>Contacter</a></li>
             </ul>
+            <div class="icones">
+                <a target="_blank" href="https://www.linkedin.com/in/gabriel-lev-lem/" title="Linkedin"><i id="icons" class="fab fa-linkedin"></i></a>
+                <a target="_blank" href="https://www.behance.net/gabriel_lev_lem" title="Behance"><i id="icons" class="fab fa-behance"></i></a>
+                <a target="_blank" href="https://twitter.com/LemoyneLevesque" title="Twitter"><i id="icons" class="fab fa-twitter"></i></a>
+            </div>
           </nav>
         </section>
     </header>
         
         <main>
-            <section></section>
+            <section>Bienvenue ! Je suis Gabriel Lévesque-Lemoyne</section>
+            <section>Je suis</section>
         </main>
-
+  
         <footer>
             
         </footer>
-    
-</body>
 
 <script>
      (function() { //IIFE
@@ -50,4 +56,5 @@
             }
         })(); //Fin IIFE
 </script>
+</body>
 </html>
