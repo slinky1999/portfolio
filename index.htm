@@ -12,7 +12,7 @@
 <body>
    
     <header>
-        <section class="menuBarre">
+        <main class="menuBarre">
           <nav class="menu">
               <input id="checkMenu" type="checkbox">
               <label id="btnMenu" for="checkMenu"><i id="icons" class="fas fa-bars"></i></label>
@@ -28,18 +28,56 @@
                 <a target="_blank" href="https://twitter.com/LemoyneLevesque" title="Twitter"><i id="icons" class="fab fa-twitter"></i></a>
             </div>
           </nav>
-        </section>
+        </main>
     </header>
         
-        <main>
-            <section>Bienvenue ! Je suis Gabriel Lévesque-Lemoyne</section>
-            <section>Je suis</section>
-        </main>
+        <main class="scrolling">
+
+            <section class="sectionPresentation">
+                <h4>Bienvenue ! Je suis Gabriel Lévesque-Lemoyne</h4>
+
+            </section>
+
+            <section class="sectionPortfolio">
+                <h4>Portfolio</h4>
+                <p>Voici mes réalisations sélectionnées</p>
+                <div id="categorieProjet">
+                    <p>Tout</p>
+                    <p>Contenu 3D</p>
+                    <p>Jeux vidéo</p>
+                    <p>Design</p>
+                </div>
+            </section>
+
+            <section class="sectionPresentation">
+                <h4>À propos</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacus est, congue nec dictum eu,
+                    convallis in urna. Cras at enim suscipit, iaculis orci sit amet, dignissim massa. Nam consequat
+                    lectus vel dolor dapibus placerat. Maecenas mauris purus, congue nec sagittis sed, pretium sed massa.
+                    Nunc sem enim, tincidunt non mi id, scelerisque condimentum risus. Pellentesque bibendum nec turpis
+                    nec ultrices. Suspendisse sem sem, feugiat vitae euismod cursus, ullamcorper eu leo. Cras eu urna eu
+                    odio consectetur lobortis vel quis lectus. Mauris aliquam faucibus lectus id venenatis. Integer ut 
+                    cursus justo, in ultrices ipsum. Sed posuere, leo eget venenatis vestibulum, lectus quam egestas ex,
+                    id commodo lectus libero eu sapien. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                </p>
+            </section>
+
+            <section class="sectionCollab">
+                <p class="collaboration" key="link-gabriel.levesque.lemoyne@hotmail.com">
+                    <span>Collaborons !</span>
+                    <a target="_self" href="mailto:gabriel.levesque.lemoyne@hotmail.com" title="Adresse courriel">
+                    <span>gabriel.levesque.lemoyne@hotmail.com</span>
+                    </a>
+                </p>
+            </section>
+       
   
         <footer>
-            
+        <section class="sectionFooter">
+            <h4>Footer</h4>
+        </section>
         </footer>
-
+    </main>
 <script>
      (function() { //IIFE
             var leCheckBox = document.querySelector("nav input");
