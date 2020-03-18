@@ -419,14 +419,6 @@ section {
   width: 100vw;
 }
 
-.sectionFooter {
-  color: white;
-  background-color: #201f24;
-  text-align: center;
-  height: 80vh;
-  width: 100vw;
-}
-
 /*----------------------------------------------------------------
 # Menu
 --------------------------------------------------------------*/
@@ -485,8 +477,6 @@ body {
   background-color: #3c2194;
   text-decoration: none;
   color: white;
-  -webkit-transition-property: ease-in-out opacity;
-  transition-property: ease-in-out opacity;
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
 }
@@ -496,19 +486,16 @@ body {
   opacity: 0;
   text-align: left;
   -webkit-opacity: opacity(0);
-  -webkit-transition-property: ease-in-out opacity;
-  transition-property: ease-in-out opacity;
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
   cursor: pointer;
   visibility: hidden;
+  margin: 60px;
 }
 
 #checkMenu:checked ~ #btnMenu {
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
-  -webkit-transition-property: ease-in-out rotate;
-  transition-property: ease-in-out rotate;
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
 }
@@ -516,8 +503,6 @@ body {
 #checkMenu:checked ~ .listeMenu {
   -webkit-opacity: opacity(1);
   opacity: 1;
-  -webkit-transition-property: ease-out opacity;
-  transition-property: ease-out opacity;
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
 }
@@ -525,8 +510,6 @@ body {
 #checkMenu:checked ~ ul > li {
   -webkit-opacity: opacity(1);
   opacity: 1;
-  -webkit-transition-property: ease-out opacity;
-  transition-property: ease-out opacity;
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
   visibility: visible;
@@ -542,13 +525,6 @@ body {
   transition: 0.5s;
 }
 
-.choixMenu {
-  opacity: 0;
-  margin: 60px;
-  text-align: center;
-  text-align: left;
-}
-
 .menuBarre {
   background-color: #3c2194;
   width: 100%;
@@ -559,8 +535,6 @@ body {
 #btnMenu {
   -webkit-transform: rotate(0deg);
   transform: rotate(0deg);
-  -webkit-transition-property: ease-in-out rotate;
-  transition-property: ease-in-out rotate;
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
   font-size: 3em;
@@ -573,8 +547,6 @@ body {
 #btnMenu:checked {
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
-  -webkit-transition-property: ease-out rotate;
-  transition-property: ease-out rotate;
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
 }
@@ -588,8 +560,6 @@ body {
       flex-shrink: 0;
   position: fixed;
   -webkit-opacity: opacity(0);
-  -webkit-transition-property: ease-in-out opacity;
-  transition-property: ease-in-out opacity;
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
   cursor: pointer;
@@ -599,8 +569,6 @@ body {
 #checkMenu:checked ~ .icones {
   -webkit-opacity: opacity(1);
   opacity: 1;
-  -webkit-transition-property: ease-out opacity;
-  transition-property: ease-out opacity;
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
   visibility: visible;
@@ -674,6 +642,14 @@ a {
 /*----------------------------------------------------------------
 # Pied-page
 --------------------------------------------------------------*/
+.sectionFooter {
+  color: white;
+  background-color: #201f24;
+  text-align: center;
+  height: 80vh;
+  width: 100vw;
+}
+
 /*----------------------------------------------------------------
 # Entete
 --------------------------------------------------------------*/
