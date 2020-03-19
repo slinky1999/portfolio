@@ -425,6 +425,9 @@ section {
   -ms-flex-line-pack: center;
       align-content: center;
   text-align: center;
+  font-family: myriad-pro, sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 #adresseCourriel {
@@ -683,6 +686,9 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  font-family: myriad-pro, sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
 
 .sectionPresentation p {
