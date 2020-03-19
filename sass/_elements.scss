@@ -26,17 +26,7 @@ body {
    
 
  }
-
- .sectionPresentation {
-    
-    color: azure;
-    background-color: #201f24;
-    text-align: center;
-    height: 100vh;
-    width: 100vw;
-
- }
-
+ 
  .sectionPortfolio{
     
     color: black;
@@ -57,7 +47,15 @@ body {
     justify-content: center;
     align-items: center;
     align-content: center;
+    text-align: center;
  }
+
+ #adresseCourriel{
+  cursor: pointer;  
+  text-decoration: underline;
+  font-style: italic;
+  font-size: 0.8em;
+}
 
 //  .collaboration{
    
