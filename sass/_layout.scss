@@ -16,6 +16,8 @@
     padding: 12px 16px;
     background-color: white;
     cursor: pointer;
+    font-size: calc(0.5em + 1vw);
+    position: relative;
 }
 
 /* The "show" class is added to the filtered elements */

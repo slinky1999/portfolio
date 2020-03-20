@@ -392,6 +392,8 @@ template {
   padding: 12px 16px;
   background-color: white;
   cursor: pointer;
+  font-size: calc(0.5em + 1vw);
+  position: relative;
 }
 
 /* The "show" class is added to the filtered elements */
@@ -460,23 +462,6 @@ section {
 /*----------------------------------------------------------------
 # Menu
 --------------------------------------------------------------*/
-.menu {
-  width: 100%;
-  height: 100%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -ms-flex-direction: row-reverse;
-      flex-direction: row-reverse;
-}
-
 body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -488,7 +473,25 @@ body {
   background-color: #201f24;
 }
 
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+ul {
+  visibility: hidden;
+}
+
 .listeMenu {
+  visibility: hidden;
   opacity: 0;
   -webkit-opacity: opacity(0);
   width: 100%;
@@ -517,17 +520,13 @@ body {
   color: white;
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
-  visibility: hidden;
 }
 
 .choixMenu {
   text-align: center;
-  opacity: 0;
-  -webkit-opacity: opacity(0);
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
   cursor: pointer;
-  visibility: hidden;
   margin: 60px;
 }
 
@@ -567,7 +566,7 @@ body {
 .menuBarre {
   background-color: #3c2194;
   width: 100%;
-  height: 10%;
+  height: 8%;
   position: fixed;
   z-index: 5;
 }
@@ -626,15 +625,6 @@ a {
 }
 
 /*Styles tablette*/
-@media (min-width: 541px) and (max-width: 1199px) {
-  .choixMenu {
-    margin: 100px auto;
-    text-align: center;
-    opacity: 0;
-    text-align: left;
-  }
-}
-
 /*Style grand écran*/
 @media (min-width: 1200px) {
   .menu {
@@ -648,6 +638,7 @@ a {
     -webkit-box-flex: 1;
         -ms-flex: 1 0 auto;
             flex: 1 0 auto;
+    visibility: hidden;
   }
   .menuBarre {
     background-color: #3c2194;
@@ -808,6 +799,8 @@ a {
   padding: 12px 16px;
   background-color: white;
   cursor: pointer;
+  font-size: calc(0.5em + 1vw);
+  position: relative;
 }
 
 /* The "show" class is added to the filtered elements */

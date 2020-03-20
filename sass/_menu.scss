@@ -1,21 +1,23 @@
-.menu {
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-    display: flex;
-    align-items:flex-start;
-    flex-direction: row-reverse;
-    
-}
-
 body {
     display: flex;
     flex-direction: column;
     background-color: #201f24;
 }
 
+.menu {
+    display: flex;
+    align-items:flex-start;
+    flex-direction: row-reverse;
+    
+}
+
+ul {
+    visibility: hidden;
+
+}
 
 .listeMenu {
+    visibility: hidden;
     opacity: 0;
     -webkit-opacity: opacity(0);
     width: 100%;
@@ -34,17 +36,12 @@ body {
     text-decoration: none;
     color: white;
     transition-duration: 1s;
-    visibility: hidden;
-    
 }
 
 .choixMenu {
     text-align: center;
-    opacity: 0;
-    -webkit-opacity: opacity(0);
     transition-duration: 1s;
     cursor: pointer;
-    visibility: hidden;
     margin: 60px;
 }
 
@@ -82,7 +79,7 @@ body {
     .menuBarre {
         background-color: #3c2194;
         width: 100%;
-        height: 10%;
+        height: 8%;
         position: fixed;
         z-index: 5;
     }
@@ -139,13 +136,13 @@ a {
 /*Styles tablette*/
 @media (min-width:541px) and (max-width:1199px) {
     
-      .choixMenu {
-    margin: 100px auto;
-    text-align: center;
-    opacity: 0;
-    text-align: left;
+//       .choixMenu {
+//     margin: 100px auto;
+//     text-align: center;
+//     opacity: 0;
+//     text-align: left;
 
-}
+// }
     
 }
 
@@ -153,14 +150,13 @@ a {
 @media (min-width:1200px) {
     
     .menu{
-        
-        flex-direction: row;
+    flex-direction: row;
     }
     
     .listeMenu {
-        width: 70vh;
-        flex: 1 0 auto;
-       
+    width: 70vh;
+    flex: 1 0 auto;
+    visibility: hidden;
     }
     
     .menuBarre {
