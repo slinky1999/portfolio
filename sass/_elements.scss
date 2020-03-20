@@ -14,7 +14,6 @@ body {
 
  section {
     display: flex;
-    background-color: aquamarine;
     scroll-snap-align: start;
     font-size: 2em;
     z-index: -1;
@@ -26,16 +25,6 @@ body {
     display: block;
    
 
- }
- 
- .sectionPortfolio{
-    
-    color: black;
-    background-color: white;
-    text-align: center;
-    height: 100vh;
-    width: 100vw;
-    
  }
 
  .sectionCollab{

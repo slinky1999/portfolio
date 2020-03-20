@@ -1,0 +1,38 @@
+.sectionPortfolio {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: white;
+}
+
+#projets {
+   position: relative;
+   flex: 3 0 auto;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* The "show" class is added to the filtered elements */
+// .show {
+//     display: block;
+//   }
+
+/* Clear floats after rows */ 
+// .row:after {
+//     content: "";
+//     display: table;
+//     clear: both;
+//   }
+
+
+// /* Center website */
+// .main {
+//     max-width: 1000px;
+//     margin: auto;
+//   }

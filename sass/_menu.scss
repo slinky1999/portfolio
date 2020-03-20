@@ -34,13 +34,13 @@ body {
     text-decoration: none;
     color: white;
     transition-duration: 1s;
+    visibility: hidden;
     
 }
 
 .choixMenu {
     text-align: center;
     opacity: 0;
-    text-align: left;
     -webkit-opacity: opacity(0);
     transition-duration: 1s;
     cursor: pointer;
@@ -60,6 +60,7 @@ body {
     -webkit-opacity: opacity(1);
     opacity: 1;
     transition-duration: 1s;
+    visibility: visible;
 }
 
 #checkMenu:checked ~ ul > li {
@@ -83,7 +84,7 @@ body {
         width: 100%;
         height: 10%;
         position: fixed;
-
+        z-index: 5;
     }
  
     #btnMenu {

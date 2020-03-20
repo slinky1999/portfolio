@@ -367,6 +367,35 @@ template {
 /*----------------------------------------------------------------
 # Layout
 --------------------------------------------------------------*/
+.sectionPortfolio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  background-color: white;
+}
+
+#projets {
+  position: relative;
+  -webkit-box-flex: 3;
+      -ms-flex: 3 0 auto;
+          flex: 3 0 auto;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* The "show" class is added to the filtered elements */
+/* Clear floats after rows */
 /*----------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -386,7 +415,6 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: aquamarine;
   scroll-snap-align: start;
   font-size: 2em;
   z-index: -1;
@@ -394,14 +422,6 @@ section {
 
 .scrolling {
   display: block;
-}
-
-.sectionPortfolio {
-  color: black;
-  background-color: white;
-  text-align: center;
-  height: 100vh;
-  width: 100vw;
 }
 
 .sectionCollab {
@@ -497,12 +517,12 @@ body {
   color: white;
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
+  visibility: hidden;
 }
 
 .choixMenu {
   text-align: center;
   opacity: 0;
-  text-align: left;
   -webkit-opacity: opacity(0);
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
@@ -523,6 +543,7 @@ body {
   opacity: 1;
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
+  visibility: visible;
 }
 
 #checkMenu:checked ~ ul > li {
@@ -548,6 +569,7 @@ body {
   width: 100%;
   height: 10%;
   position: fixed;
+  z-index: 5;
 }
 
 #btnMenu {
@@ -761,4 +783,33 @@ a {
 /*----------------------------------------------------------------
 # Layout
 --------------------------------------------------------------*/
+.sectionPortfolio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  background-color: white;
+}
+
+#projets {
+  position: relative;
+  -webkit-box-flex: 3;
+      -ms-flex: 3 0 auto;
+          flex: 3 0 auto;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* The "show" class is added to the filtered elements */
+/* Clear floats after rows */
 /*# sourceMappingURL=style.css.map */
