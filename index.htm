@@ -41,43 +41,55 @@
                 <h4 id="titrePortfolio">Portfolio</h4>
                 <p>Voici mes réalisations sélectionnées</p>
                 <div id="categorieProjet">
-                    <button class="btn active">Tout</button>
-                    <button class="btn">Contenu 3D</button>
-                    <button class="btn">Jeux vidéo</button>
-                    <button class="btn">Design</button>
+                    <button class="btn active" onclick="filterSelection('all')">Tout</button>
+                    <button class="btn" onclick="filterSelection('contenu3D')">Contenu 3D</button>
+                    <button class="btn" onclick="filterSelection('jeuxVideo')">Jeux vidéo</button>
+                    <button class="btn" onclick="filterSelection('design')">Design</button>
                 </div>
-                <div id="projets">
-                    <div id="contenu3D">
+                <div class="projets">
+                    <div class="column contenu3D">
                         <div class="contenu">
                             <img src="img/ennemis3D.jpg" alt="Ennemis 3D" class="image">
-                                <div class="texteProjet">Champignon</div>
+                                <!-- <div class="texteProjet">Champignon</div>
                                 <a target="_blank" href="https://twitter.com/LemoyneLevesque" title="Twitter">
                                     <button class="voirPlus">Voir plus</button>
-                                </a>
+                                </a> -->
                         </div>
                     </div>
-                    <div id="jeuxVideo">
+                    <div class="column jeuxVideo">
                         <div class="contenu">
                             <img src="img/alien.jpg" alt="Alien">
+                        </div>
+                    </div>
+                    <div class="column jeuxVideo">
+                        <div class="contenu">
                             <img src="img/virus.jpg" alt="Virus">
                         </div>
                     </div>
-                    <div id="design">
+                    <div class="column design">
                         <div class="contenu">
                             <img src="img/carteBlanche.jpg" alt="Carte Blanche">
-                            <img src="img/mdj.jpg" alt="Maison des jeunes">
                         </div>
                     </div>
-                    <div id="autre">
+                    <div class="column design">
+                        <div class="contenu">
+                            <img src="img/mdj.jpg" alt="Maison de jeunes">
+                        </div>
+                    </div>
+                    <div class="column autre">
                         <div class="contenu">
                             <img src="img/showreel.jpg" alt="Showreel">
-                            <img src="img/logo.jpg" alt="Logo">
+                        </div>
+                    </div>
+                    <div class="column autre">
+                        <div class="contenu">
+                            <img src="img/logo.jpg" alt="Showreel">
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section class="sectionPresentation">
+            <section class="sectionPropos">
                 <h4>À propos</h4>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacus est, congue nec dictum eu,
                     convallis in urna. Cras at enim suscipit, iaculis orci sit amet, dignissim massa. Nam consequat
@@ -125,5 +137,6 @@
 </script>
 <script src="https://kit.fontawesome.com/5134b43bb4.js" crossorigin="anonymous"></script>
 <script src="js/animationTxt.js"></script>
+<script src="js/projetsFiltre.js"></script>
 </body>
 </html>

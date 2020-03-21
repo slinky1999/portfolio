@@ -389,44 +389,31 @@ template {
   font-size: calc(1.5em + 1vw);
 }
 
+.projets {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.projets,
+.projets > .column {
+  padding: 8px;
+}
+
+.projets:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  display: none;
+  /* Hide all elements by default */
+}
+
 .contenu {
-  position: relative;
-  width: 50%;
-}
-
-.image {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
-  background-color: grey;
-}
-
-.contenu:hover .overlay {
-  opacity: 0.9;
-}
-
-.texteProjet {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
+  background-color: green;
 }
 
 /* The "show" class is added to the filtered elements */
@@ -452,17 +439,16 @@ template {
   color: white;
 }
 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 /*Styles tablette*/
 /*Styles Grand-écran */
 /*----------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 html {
   -ms-scroll-snap-type: y proximity;
       scroll-snap-type: y proximity;
@@ -514,9 +500,34 @@ section {
   font-style: normal;
 }
 
+.sectionPropos {
+  color: white;
+  background-color: #1a191d;
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center;
+  font-family: myriad-pro, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
 #adresseCourriel {
   cursor: pointer;
-  text-decoration: underline;
   font-style: italic;
   font-size: 0.8em;
 }
@@ -857,44 +868,31 @@ a {
   font-size: calc(1.5em + 1vw);
 }
 
+.projets {
+  margin: 10px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.projets,
+.projets > .column {
+  padding: 8px;
+}
+
+.projets:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  display: none;
+  /* Hide all elements by default */
+}
+
 .contenu {
-  position: relative;
-  width: 50%;
-}
-
-.image {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
-  background-color: grey;
-}
-
-.contenu:hover .overlay {
-  opacity: 0.9;
-}
-
-.texteProjet {
-  color: white;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
+  background-color: green;
 }
 
 /* The "show" class is added to the filtered elements */
@@ -918,12 +916,6 @@ a {
 .btn.active {
   background-color: #666;
   color: white;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
 }
 
 /*Styles tablette*/
