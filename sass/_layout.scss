@@ -7,8 +7,9 @@
     font-weight: 700;
     font-style: normal;
     width: 100vw;
-    height: 200vh;
+    height: 400vh;
     margin: auto;
+    z-index: auto;
 }
 
 #titrePortfolio {
@@ -29,7 +30,7 @@
 
 .column {
     float: left;
-    width: 50%;
+    width: 100%;
     height: auto;
     display: none; /* Hide all elements by default */
   }
@@ -69,8 +70,8 @@
 }
 
 img {
-  width: 100%;
-  height: auto;
+  max-width: 100%;
+  max-height: auto;
   transition: all .2s ease-in-out;
 }
 
@@ -136,39 +137,58 @@ img {
     left: 35%;
     text-align: center;
   }
+
+  #ImgGab {
+
+    width: 30%;
+  }
    /*Styles tablette*/
 @media (min-width:541px) and (max-width:1199px) {
-  
-        /* Add padding BETWEEN each column */
-  .projets,
-  .projets > .column {
-    
-  }
+
 
 .column {
   width: 50%;
   }
 
 .contenu {
-   
+   max-width: 60%;
   
   }
+
+  img {
+    max-width: 100%;
+  }
+  
     }
     /*Styles Grand-écran */
    @media (min-width:1200px) {
   /* Add padding BETWEEN each column */
   .projets,
   .projets > .column {
-   
+    
+    margin-left: 5vw;
   }
 
-.column {
-  width: 50%;
+  .column {
+    width: 40%;
+    
   }
 
 .contenu {
-   
-  
+  max-width: 70%;
+  height: 70%;
+
   }
+
+  img {
+    width: 100%;
+  }
+
+  .sectionPortfolio {
+    
+    height: 250vh;
+    
+}
+
 
    }

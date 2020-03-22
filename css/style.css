@@ -381,8 +381,9 @@ template {
   font-weight: 700;
   font-style: normal;
   width: 100vw;
-  height: 200vh;
+  height: 400vh;
   margin: auto;
+  z-index: auto;
 }
 
 #titrePortfolio {
@@ -405,7 +406,7 @@ template {
 
 .column {
   float: left;
-  width: 50%;
+  width: 100%;
   height: auto;
   display: none;
   /* Hide all elements by default */
@@ -449,8 +450,8 @@ template {
 }
 
 img {
-  width: 100%;
-  height: auto;
+  max-width: 100%;
+  max-height: auto;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
@@ -518,19 +519,42 @@ img {
   text-align: center;
 }
 
+#ImgGab {
+  width: 30%;
+}
+
 /*Styles tablette*/
 @media (min-width: 541px) and (max-width: 1199px) {
-  /* Add padding BETWEEN each column */
   .column {
     width: 50%;
+  }
+  .contenu {
+    max-width: 60%;
+  }
+  img {
+    max-width: 100%;
   }
 }
 
 /*Styles Grand-écran */
 @media (min-width: 1200px) {
   /* Add padding BETWEEN each column */
+  .projets,
+  .projets > .column {
+    margin-left: 5vw;
+  }
   .column {
-    width: 50%;
+    width: 40%;
+  }
+  .contenu {
+    max-width: 70%;
+    height: 70%;
+  }
+  img {
+    width: 100%;
+  }
+  .sectionPortfolio {
+    height: 250vh;
   }
 }
 
@@ -546,7 +570,9 @@ html {
   -ms-scroll-snap-type: y proximity;
       scroll-snap-type: y proximity;
   scroll-behavior: smooth;
-  margin: 0;
+  margin: auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 section {
@@ -593,9 +619,6 @@ section {
   background-color: #1a191d;
   height: 100vh;
   width: 100vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -645,8 +668,6 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #201f24;
-  overflow-x: hidden;
-  overflow-y: scroll;
 }
 
 .menu {
@@ -908,7 +929,7 @@ a {
 
 .texteIntro {
   padding: 50px;
-  font-size: calc(1em + 1.5vw);
+  font-size: calc(0.8em + 1.5vw);
   white-space: pre-wrap;
 }
 
@@ -963,8 +984,10 @@ a {
 /*Styles Grand-écran */
 @media (min-width: 1200px) {
   .texteIntro {
-    font-size: 1.5em;
-    white-space: nowrap;
+    font-size: 1.3em;
+    white-space: pre-wrap;
+    padding: 150px;
+    text-align: center;
   }
 }
 
@@ -988,8 +1011,9 @@ a {
   font-weight: 700;
   font-style: normal;
   width: 100vw;
-  height: 200vh;
+  height: 400vh;
   margin: auto;
+  z-index: auto;
 }
 
 #titrePortfolio {
@@ -1012,7 +1036,7 @@ a {
 
 .column {
   float: left;
-  width: 50%;
+  width: 100%;
   height: auto;
   display: none;
   /* Hide all elements by default */
@@ -1056,8 +1080,8 @@ a {
 }
 
 img {
-  width: 100%;
-  height: auto;
+  max-width: 100%;
+  max-height: auto;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
@@ -1125,19 +1149,42 @@ img {
   text-align: center;
 }
 
+#ImgGab {
+  width: 30%;
+}
+
 /*Styles tablette*/
 @media (min-width: 541px) and (max-width: 1199px) {
-  /* Add padding BETWEEN each column */
   .column {
     width: 50%;
+  }
+  .contenu {
+    max-width: 60%;
+  }
+  img {
+    max-width: 100%;
   }
 }
 
 /*Styles Grand-écran */
 @media (min-width: 1200px) {
   /* Add padding BETWEEN each column */
+  .projets,
+  .projets > .column {
+    margin-left: 5vw;
+  }
   .column {
-    width: 50%;
+    width: 40%;
+  }
+  .contenu {
+    max-width: 70%;
+    height: 70%;
+  }
+  img {
+    width: 100%;
+  }
+  .sectionPortfolio {
+    height: 250vh;
   }
 }
 /*# sourceMappingURL=style.css.map */

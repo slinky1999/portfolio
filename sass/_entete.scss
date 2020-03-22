@@ -42,7 +42,7 @@
 
   .texteIntro {
     padding: 50px;
-    font-size: calc(1em + 1.5vw);
+    font-size: calc(0.8em + 1.5vw);
     white-space: pre-wrap;
   }
 
@@ -72,8 +72,10 @@
 
 
   .texteIntro {
-    font-size: 1.5em;
-    white-space: nowrap;
+    font-size: 1.3em;
+    white-space: pre-wrap;
+    padding: 150px;
+    text-align: center;
   }
 
 }
