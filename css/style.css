@@ -546,6 +546,7 @@ html {
   -ms-scroll-snap-type: y proximity;
       scroll-snap-type: y proximity;
   scroll-behavior: smooth;
+  margin: 0;
 }
 
 section {
@@ -611,6 +612,22 @@ section {
   font-family: myriad-pro, sans-serif;
   font-weight: 700;
   font-style: normal;
+}
+
+.sectionFooter {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center;
 }
 
 #adresseCourriel {
