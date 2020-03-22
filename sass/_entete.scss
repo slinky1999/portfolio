@@ -40,6 +40,16 @@
     animation: none;
   }
 
+  .texteIntro {
+    padding: 50px;
+    font-size: calc(1em + 1.5vw);
+    white-space: pre-wrap;
+  }
+
+  #texteNom {
+    color: #dd7732;
+  }
+
   @keyframes blink {
     0%  { background-color: #ccc; }
     49% { background-color: #ccc; }
@@ -47,3 +57,23 @@
     99% { background-color: transparent; }
     100%  { background-color: #ccc; }
   }
+
+     /*Styles tablette*/
+@media (min-width:541px) and (max-width:1199px) {
+  
+  .texteIntro {
+    font-size: 1.3em;
+    white-space: pre-wrap;
+  }
+
+}
+/*Styles Grand-écran */
+@media (min-width:1200px) {
+
+
+  .texteIntro {
+    font-size: 1.5em;
+    white-space: nowrap;
+  }
+
+}

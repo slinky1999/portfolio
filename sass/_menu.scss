@@ -1,7 +1,9 @@
 body {
-    display: flex;
     flex-direction: column;
     background-color: #201f24;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    
 }
 
 .menu {
@@ -88,7 +90,6 @@ ul {
         transform: rotate(0deg);
         transition-duration: 1s;
         font-size: 3em;
-        position: fixed;
         z-index: 2;
         color: white;
         cursor: pointer;
