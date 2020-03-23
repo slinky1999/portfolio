@@ -381,13 +381,14 @@ template {
   font-weight: 700;
   font-style: normal;
   width: 100vw;
-  height: 400vh;
+  height: auto;
   margin: auto;
   z-index: auto;
 }
 
 #titrePortfolio {
-  font-size: calc(1.5em + 1vw);
+  font-size: calc(1.2em + 1vw);
+  padding-top: 100px;
 }
 
 .projets:after {
@@ -443,7 +444,7 @@ template {
 .btn {
   border: none;
   outline: none;
-  background-color: green;
+  background-color: none;
   cursor: pointer;
   font-size: calc(0.5em + 1vw);
   position: relative;
@@ -457,12 +458,15 @@ img {
 }
 
 .btn:hover {
-  background-color: #ddd;
+  text-decoration: underline;
+  color: #3c2194;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .btn.active {
-  background-color: #666;
-  color: white;
+  background-color: none;
+  color: none;
 }
 
 .contenu:hover .texteProjet {
@@ -520,7 +524,9 @@ img {
 }
 
 #ImgGab {
-  width: 30%;
+  float: left;
+  width: 40%;
+  margin: auto;
 }
 
 /*Styles tablette*/
@@ -552,9 +558,6 @@ img {
   }
   img {
     width: 100%;
-  }
-  .sectionPortfolio {
-    height: 250vh;
   }
 }
 
@@ -615,8 +618,8 @@ section {
 }
 
 .sectionPropos {
-  color: white;
-  background-color: #1a191d;
+  color: black;
+  background-color: #e1d5d5;
   height: 100vh;
   width: 100vw;
   -webkit-box-orient: vertical;
@@ -637,26 +640,31 @@ section {
   font-style: normal;
 }
 
-.sectionFooter {
+.contenuPropos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  margin: auto;
+}
+
+.contenuProposTexte {
+  font-size: calc(0.4em + 1vw);
   text-align: center;
+  height: auto;
 }
 
 #adresseCourriel {
   cursor: pointer;
   font-style: italic;
   font-size: 0.8em;
+  text-decoration: underline;
+  height: auto;
+  margin: auto;
+  position: relative;
 }
 
 /*----------------------------------------------------------------
@@ -773,7 +781,6 @@ ul {
   -webkit-transition-duration: 1s;
           transition-duration: 1s;
   font-size: 3em;
-  z-index: 2;
   color: white;
   cursor: pointer;
 }
@@ -876,6 +883,10 @@ a {
   width: 100vw;
 }
 
+.iconFooter {
+  position: relative;
+}
+
 /*----------------------------------------------------------------
 # Entete
 --------------------------------------------------------------*/
@@ -973,6 +984,41 @@ a {
   }
 }
 
+.sectionFooter {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  text-align: center;
+  color: white;
+  background-color: #201f24;
+  text-align: center;
+  height: 20vh;
+  width: 100vw;
+}
+
+.sectionFooter a:hover {
+  color: #e0893d;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#footerAuteur {
+  color: white;
+  text-align: center;
+  font-size: calc(0.4em + 0.6vw);
+  font-family: myriad-pro, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
 /*Styles tablette*/
 @media (min-width: 541px) and (max-width: 1199px) {
   .texteIntro {
@@ -1011,13 +1057,14 @@ a {
   font-weight: 700;
   font-style: normal;
   width: 100vw;
-  height: 400vh;
+  height: auto;
   margin: auto;
   z-index: auto;
 }
 
 #titrePortfolio {
-  font-size: calc(1.5em + 1vw);
+  font-size: calc(1.2em + 1vw);
+  padding-top: 100px;
 }
 
 .projets:after {
@@ -1073,7 +1120,7 @@ a {
 .btn {
   border: none;
   outline: none;
-  background-color: green;
+  background-color: none;
   cursor: pointer;
   font-size: calc(0.5em + 1vw);
   position: relative;
@@ -1087,12 +1134,15 @@ img {
 }
 
 .btn:hover {
-  background-color: #ddd;
+  text-decoration: underline;
+  color: #3c2194;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .btn.active {
-  background-color: #666;
-  color: white;
+  background-color: none;
+  color: none;
 }
 
 .contenu:hover .texteProjet {
@@ -1150,7 +1200,9 @@ img {
 }
 
 #ImgGab {
-  width: 30%;
+  float: left;
+  width: 40%;
+  margin: auto;
 }
 
 /*Styles tablette*/
@@ -1182,9 +1234,6 @@ img {
   }
   img {
     width: 100%;
-  }
-  .sectionPortfolio {
-    height: 250vh;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -7,13 +7,14 @@
     font-weight: 700;
     font-style: normal;
     width: 100vw;
-    height: 400vh;
+    height: auto;
     margin: auto;
     z-index: auto;
 }
 
 #titrePortfolio {
-    font-size: calc(1.5em + 1vw);
+    font-size: calc(1.2em + 1vw);
+    padding-top: 100px;
 }
   
   .projets:after {
@@ -62,7 +63,7 @@
 .btn {
     border: none;
     outline: none;
-    background-color: green;
+    background-color: none;
     cursor: pointer;
     font-size: calc(0.5em + 1vw);
     position: relative;
@@ -76,12 +77,14 @@ img {
 }
 
 .btn:hover {
-    background-color: #ddd;
+    text-decoration: underline;
+    color:#3c2194;
+    transition: 0.5s;
   }
   
   .btn.active {
-    background-color: #666;
-    color: white;
+    background-color: none;
+    color: none;
   }
 
   .contenu:hover .texteProjet {
@@ -139,9 +142,11 @@ img {
   }
 
   #ImgGab {
-
-    width: 30%;
+    float: left;
+    width: 40%;
+    margin:auto;
   }
+
    /*Styles tablette*/
 @media (min-width:541px) and (max-width:1199px) {
 
@@ -183,12 +188,5 @@ img {
   img {
     width: 100%;
   }
-
-  .sectionPortfolio {
-    
-    height: 250vh;
-    
-}
-
 
    }

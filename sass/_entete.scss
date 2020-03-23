@@ -58,6 +58,36 @@
     100%  { background-color: #ccc; }
   }
 
+.sectionFooter{
+  
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    color: white;
+    background-color: #201f24;
+    text-align: center;
+    height: 20vh;
+    width: 100vw;
+    
+    
+}
+
+.sectionFooter a:hover {
+  color: #e0893d;
+  transition: 0.5s;
+}
+
+#footerAuteur{
+
+    color:white;
+    text-align: center;
+    font-size: calc(0.4em + 0.6vw);
+    font-family: myriad-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
      /*Styles tablette*/
 @media (min-width:541px) and (max-width:1199px) {
   

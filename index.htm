@@ -15,10 +15,10 @@
               <input id="checkMenu" type="checkbox">
               <label id="btnMenu" for="checkMenu"><i id="icons" class="fas fa-bars"></i></label>
             <ul class="listeMenu">
-                <li class="choixMenu"><a>Accueil</a></li>
-                <li class="choixMenu"><a>Projets</a></li>
-                <li class="choixMenu"><a class="aPropos">Services</a></li>
-                <li class="choixMenu"><a>Contacter</a></li>
+                <li class="choixMenu"><a href="#sectionPresentation">Accueil</a></li>
+                <li class="choixMenu"><a href="#sectionPortfolio">Projets</a></li>
+                <li class="choixMenu"><a href="#sectionPropos" class="aPropos">À propos</a></li>
+                <li class="choixMenu"><a href="#sectionCollab">Contacter</a></li>
             </ul>
             <div class="icones">
                 <a target="_blank" href="https://www.linkedin.com/in/gabriel-lev-lem/" title="Linkedin"><i id="iconLin" class="fab fa-linkedin"></i></a>
@@ -30,16 +30,16 @@
     </div>    
         <main class="scrolling">
 
-            <section class="sectionPresentation">
+            <section class="sectionPresentation" id="sectionPresentation">
                 <div class="texteIntro">
-                <h4>Bienvenue, je suis <span id="texteNom">Gabriel Lévesque-Lemoyne</span> . Un intégrateur multimédia basé à Montréal.</h4>
+                <h4>Bienvenue, je suis <span id="texteNom">Gabriel Lévesque-Lemoyne</span>. Un intégrateur multimédia basé à Montréal.</h4>
                 </div>
                 <p>Je réalise des <span class="texteEcrit"></span>
                     <span class="curseur">&nbsp;</span>
                 </p>
             </section>
 
-            <section class="sectionPortfolio">
+            <section class="sectionPortfolio" id="sectionPortfolio">
                 <h4 id="titrePortfolio">Portfolio</h4>
                 <p>Voici mes réalisations sélectionnées</p>
                 <div id="categorieProjet">
@@ -127,25 +127,27 @@
                 </div>
             </section>
 
-            <section class="sectionPropos">
+            <section class="sectionPropos" id="sectionPropos">
+                <h4 id="titrePortfolio">À propos</h4>
                 <div class="contenuPropos">
                     <img data-src="img/gabriel.png" alt="Moi" class="lazy" id="ImgGab">
                     <div class="contenuProposTexte"> 
-                    <h4>À propos</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lacus est, congue nec dictum eu,
-                    convallis in urna. Cras at enim suscipit, iaculis orci sit amet, dignissim massa. Nam consequat
-                    lectus vel dolor dapibus placerat. Maecenas mauris purus, congue nec sagittis sed, pretium sed massa.
-                    Nunc sem enim, tincidunt non mi id, scelerisque condimentum risus. Pellentesque bibendum nec turpis
-                    nec ultrices. Suspendisse sem sem, feugiat vitae euismod cursus, ullamcorper eu leo. Cras eu urna eu
-                    odio consectetur lobortis vel quis lectus. Mauris aliquam faucibus lectus id venenatis. Integer ut 
-                    cursus justo, in ultrices ipsum. Sed posuere, leo eget venenatis vestibulum, lectus quam egestas ex,
-                    id commodo lectus libero eu sapien. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                    <p>
+                    Je suis un finissant du programme d'intégration multimédia au Collège de Maisonneuve. 
+                    Un passionné par les arts numériques.
+                    </p>
+                    <p>
+                    J'apprécie le processus de collaboration pour arriver à des objectifs visés.
+                    </p>
+                    <p>
+                    Je suis ouvert à de nouvelles expériences enrichissantes qui me permettront de réaliser
+                    des projets ambitieux. N'hésitez pas à me contacter pour plus d'informations.
                     </p>
                     </div>
                 </div>
             </section>
 
-            <section class="sectionCollab">
+            <section class="sectionCollab" id="sectionCollab">
                 <div class="collaboration">
                     <h4>Collaborons !</h4>
                     <a target="_self" href="mailto:gabriel.levesque.lemoyne@hotmail.com" title="Adresse courriel">
@@ -154,10 +156,10 @@
                 </div>
             </section>
         <footer>
-            <section class="sectionFooter">
-                <a target="_blank" href="https://www.linkedin.com/in/gabriel-lev-lem/" title="Linkedin"><i id="iconLin" class="fab fa-linkedin"></i></a>
-                <a target="_blank" href="https://www.behance.net/gabriel_lev_lem" title="Behance"><i id="iconBe" class="fab fa-behance"></i></a>
-                <a target="_blank" href="https://twitter.com/LemoyneLevesque" title="Twitter"><i id="iconTwit" class="fab fa-twitter"></i></a>
+            <section class="sectionFooter" id="sectionFooter">
+                <a target="_blank" href="https://www.linkedin.com/in/gabriel-lev-lem/" title="Linkedin" class="iconFooter"><i id="iconLin" class="fab fa-linkedin"></i></a>
+                <a target="_blank" href="https://www.behance.net/gabriel_lev_lem" title="Behance" class="iconFooter"><i id="iconBe" class="fab fa-behance"></i></a>
+                <a target="_blank" href="https://twitter.com/LemoyneLevesque" title="Twitter" class="iconFooter"><i id="iconTwit" class="fab fa-twitter"></i></a>
             </section>
             <h4 id="footerAuteur"><i class="far fa-copyright"></i> Gabriel Lévesque-Lemoyne</h4>
         </footer>
