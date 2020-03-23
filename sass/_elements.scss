@@ -42,13 +42,14 @@ html {
     font-family: myriad-pro, sans-serif;
     font-weight: 700;
     font-style: normal;
+    
  }
 
  .sectionPropos{
     
    color: black;
    background-color: #e1d5d5;
-   height: 100vh;
+   height: auto;
    width: 100vw;
    flex-direction: column;
    justify-content: center;
@@ -63,14 +64,16 @@ html {
 
 .contenuPropos{
    display: flex;
-   flex-direction: row;
+   flex-direction: column;
    margin: auto;
  }
 
 .contenuProposTexte{
-   font-size: calc(0.4em + 1vw);
-   text-align: center;
+   font-size: calc(0.6em + 1vw);
+   text-align: left;
    height: auto;
+   font-style: italic;
+   margin: 50px;
  }
  
 
@@ -82,4 +85,74 @@ html {
   height: auto;
   margin: auto;
   position: relative;
+  white-space: pre-wrap;
+}
+
+#ImgGab {
+   
+   width: 50%;
+   margin:auto;
+ }
+
+ #textGabriel {
+   
+   font-size: calc(0.8em + 1vw);
+ }
+
+
+   /*Styles tablette*/
+   @media (min-width:541px) and (max-width:1199px) {
+
+      .contenuProposTexte{
+         
+         margin: 70px;
+       }
+       
+
+}
+   /*Styles Grand-écran */
+   @media (min-width:1200px) {
+    
+ .sectionPropos{
+    
+   color: black;
+   background-color: #e1d5d5;
+   height: auto;
+   width: 100vw;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   align-content: center;
+   text-align: center;
+   font-family: myriad-pro, sans-serif;
+   font-weight: 700;
+   font-style: normal;
+   
+}
+
+.contenuProposTexte{
+         
+   margin: 70px;
+ }
+
+.contenuPropos{
+   display: flex;
+   flex-direction: row;
+   margin: auto;
+ }
+
+ #ImgGab {
+   
+   width: 100%;
+   margin:auto;
+ }
+
+ .contenuGabriel {
+   
+   width: 150%;
+   margin:auto;
+   margin: 200px;
+   
+ }
+
 }
