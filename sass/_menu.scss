@@ -1,19 +1,19 @@
 body {
     flex-direction: column;
     background-color: #201f24;
-   
+
 }
 
 .menu {
     display: flex;
-    align-items:flex-start;
+    align-items: flex-start;
     flex-direction: row-reverse;
-    
+
 }
 
 ul {
     visibility: hidden;
-    
+
 }
 
 .listeMenu {
@@ -46,14 +46,14 @@ ul {
 }
 
 
-#checkMenu:checked ~ #btnMenu {
+#checkMenu:checked~#btnMenu {
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
     transition-duration: 1s;
 }
 
 
-#checkMenu:checked ~ .listeMenu {
+#checkMenu:checked~.listeMenu {
     -webkit-opacity: opacity(1);
     opacity: 1;
     transition-duration: 1s;
@@ -61,7 +61,7 @@ ul {
     margin: 0;
 }
 
-#checkMenu:checked ~ ul > li {
+#checkMenu:checked~ul>li {
     -webkit-opacity: opacity(1);
     opacity: 1;
     transition-duration: 1s;
@@ -77,45 +77,46 @@ ul {
     transition: 0.5s;
 }
 
-    .menuBarre {
-        background-color: #3c2194;
-        width: 100%;
-        height: 8%;
-        position: fixed;
-        
-    }
- 
-    #btnMenu {
-        -webkit-transform: rotate(0deg);
-        transform: rotate(0deg);
-        transition-duration: 1s;
-        font-size: 3em;
-        z-index: 2;
-        color: white;
-        cursor: pointer;
-    }
+.menuBarre {
+    background-color: #3c2194;
+    width: 100%;
+    height: 8%;
+    position: fixed;
 
- #btnMenu:checked {
-        -webkit-transform: rotate(90deg);
-        transform: rotate(90deg);
-        transition-duration: 1s;
-    }
-    .icones {
-        opacity: 0;
-        font-size: 3em;
-        white-space: nowrap;
-        color: white;
-        flex-shrink: 0;
-        position: fixed;
-        -webkit-opacity: opacity(0);
-        transition-duration: 1s;
-        cursor: pointer;
-        visibility: hidden;
-        justify-content: center;
-        align-content: center;
-     }
+}
 
-#checkMenu:checked ~ .icones {
+#btnMenu {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    transition-duration: 1s;
+    font-size: 3em;
+    z-index: 2;
+    color: white;
+    cursor: pointer;
+}
+
+#btnMenu:checked {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    transition-duration: 1s;
+}
+
+.icones {
+    opacity: 0;
+    font-size: 3em;
+    white-space: nowrap;
+    color: white;
+    flex-shrink: 0;
+    position: fixed;
+    -webkit-opacity: opacity(0);
+    transition-duration: 1s;
+    cursor: pointer;
+    visibility: hidden;
+    justify-content: center;
+    align-content: center;
+}
+
+#checkMenu:checked~.icones {
     -webkit-opacity: opacity(1);
     opacity: 1;
     transition-duration: 1s;
@@ -125,62 +126,62 @@ ul {
 a {
     text-decoration: none;
     color: inherit;
-   
+
 }
 
-#checkMenu:checked ~ .icones > a:hover {
+#checkMenu:checked~.icones>a:hover {
     color: #e0893d;
     transition: 0.5s;
 }
 
 /*Styles tablette*/
 @media (min-width:541px) and (max-width:1199px) {
-    
-//       .choixMenu {
-//     margin: 100px auto;
-//     text-align: center;
-//     opacity: 0;
-//     text-align: left;
 
-// }
-    
+    //       .choixMenu {
+    //     margin: 100px auto;
+    //     text-align: center;
+    //     opacity: 0;
+    //     text-align: left;
+
+    // }
+
 }
 
 /*Style grand écran*/
 @media (min-width:1200px) {
-    
-    .menu{
-    flex-direction: row;
+
+    .menu {
+        flex-direction: row;
     }
-    
+
     .listeMenu {
-    width: 70vh;
-    flex: 1 0 auto;
-    visibility: hidden;
-    margin: 0;
+        width: 70vh;
+        flex: 1 0 auto;
+        visibility: hidden;
+        margin: 0;
     }
-    
+
     .menuBarre {
-    width: 7%;
-    height: 100%;
+        width: 7%;
+        height: 100%;
     }
-    
-    #checkMenu:checked ~ .elementsMenu {
-    width: 33%;
-}
+
+    #checkMenu:checked~.elementsMenu {
+        width: 33%;
+    }
 
     .choixMenu {
-    padding-right: 50px;
-    white-space: nowrap;
-    } 
+        padding-right: 50px;
+        white-space: nowrap;
+    }
 
-    
+
     .icones {
-    white-space: pre-line;
-    visibility: hidden;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
+        white-space: pre-line;
+        visibility: hidden;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
 
-}
+    }
 }

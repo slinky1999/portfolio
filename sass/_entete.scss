@@ -1,77 +1,90 @@
+.sectionPresentation {
 
- .sectionPresentation {
-    
-    color: azure;
-    background-color: #201f24;
-    text-align: center;
-    height: 100vh;
-    width: 100vw;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-    font-family: myriad-pro, sans-serif;
-    font-weight: 700;
-    font-style: normal;
- }
+  color: azure;
+  background-color: #201f24;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  font-family: myriad-pro, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
 
- .sectionPresentation p {
-    font-size: 2rem;
-    padding: 0.5rem;
-    font-weight: bold;
-    letter-spacing: 0.1rem;
-    text-align: center;
-    overflow: hidden;
-  }
+.sectionPresentation p {
+  font-size: 2rem;
+  padding: 0.5rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  overflow: hidden;
+}
 
-  .sectionPresentation p span.texteEcrit {
-    font-weight: normal;
-    color: #dd7732;
-  }
+.sectionPresentation p span.texteEcrit {
+  font-weight: normal;
+  color: #dd7732;
+}
 
-  .sectionPresentation p span.curseur {
-    display: inline-block;
+.sectionPresentation p span.curseur {
+  display: inline-block;
+  background-color: #ccc;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+
+.sectionPresentation p span.cursor.typing {
+  animation: none;
+}
+
+.texteIntro {
+  padding: 50px;
+  font-size: calc(0.8em + 1.5vw);
+  white-space: pre-wrap;
+}
+
+#texteNom {
+  color: #dd7732;
+}
+
+@keyframes blink {
+  0% {
     background-color: #ccc;
-    margin-left: 0.1rem;
-    width: 3px;
-    animation: blink 1s infinite;
   }
 
-  .sectionPresentation p span.cursor.typing {
-    animation: none;
+  49% {
+    background-color: #ccc;
   }
 
-  .texteIntro {
-    padding: 50px;
-    font-size: calc(0.8em + 1.5vw);
-    white-space: pre-wrap;
+  50% {
+    background-color: transparent;
   }
 
-  #texteNom {
-    color: #dd7732;
+  99% {
+    background-color: transparent;
   }
 
-  @keyframes blink {
-    0%  { background-color: #ccc; }
-    49% { background-color: #ccc; }
-    50% { background-color: transparent; }
-    99% { background-color: transparent; }
-    100%  { background-color: #ccc; }
+  100% {
+    background-color: #ccc;
   }
+}
 
-.sectionFooter{
-  
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    align-content: center;
-    text-align: center;
-    color: white;
-    background-color: #201f24;
-    text-align: center;
-    height: 20vh;
-    width: 100vw;
-    
-    
+.sectionFooter {
+
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  color: white;
+  background-color: #201f24;
+  text-align: center;
+  height: 20vh;
+  width: 100vw;
+
+
 }
 
 .sectionFooter a:hover {
@@ -79,24 +92,26 @@
   transition: 0.5s;
 }
 
-#footerAuteur{
+#footerAuteur {
 
-    color:white;
-    text-align: center;
-    font-size: calc(0.4em + 0.6vw);
-    font-family: myriad-pro, sans-serif;
-    font-weight: 700;
-    font-style: normal;
+  color: white;
+  text-align: center;
+  font-size: calc(0.4em + 0.6vw);
+  font-family: myriad-pro, sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
-     /*Styles tablette*/
+
+/*Styles tablette*/
 @media (min-width:541px) and (max-width:1199px) {
-  
+
   .texteIntro {
     font-size: 1.3em;
     white-space: pre-wrap;
   }
 
 }
+
 /*Styles Grand-écran */
 @media (min-width:1200px) {
 

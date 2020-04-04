@@ -1,189 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://use.typekit.net/bdx4nxg.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>TP1 - Application</title>
+    <title>Gabriel Lévesque-Lemoyne | Développeur de jeux/Modélisateur 3D/Full Stack Designer</title>
+    <meta name="description"
+        content="Site web du portfolio de Gabriel Lévesque-Lemoyne. Un développeur de jeux vidéo, un modélisateur 3D et un designer full-stack.">
 </head>
+
 <body>
-    <div class="menuBarre">
-        <header>
-          <nav class="menu">
-              <input id="checkMenu" type="checkbox">
-              <label id="btnMenu" for="checkMenu"><i id="icons" class="fas fa-bars"></i></label>
-            <ul class="listeMenu">
-                <li class="choixMenu"><a href="#sectionPresentation">Accueil</a></li>
-                <li class="choixMenu"><a href="#sectionPortfolio">Projets</a></li>
-                <li class="choixMenu"><a href="#sectionPropos" class="aPropos">À propos</a></li>
-                <li class="choixMenu"><a href="#sectionCollab">Contacter</a></li>
-            </ul>
-            <div class="icones">
-                <a target="_blank" href="https://www.linkedin.com/in/gabriel-lev-lem/" title="Linkedin"><i id="iconLin" class="fab fa-linkedin"></i></a>
-                <a target="_blank" href="https://www.behance.net/gabriel_lev_lem" title="Behance"><i id="iconBe" class="fab fa-behance"></i></a>
-                <a target="_blank" href="https://twitter.com/LemoyneLevesque" title="Twitter"><i id="iconTwit" class="fab fa-twitter"></i></a>
+    <header>
+        <div class="menuBarre">
+            <nav class="menu">
+                <input id="checkMenu" type="checkbox">
+                <label id="btnMenu" for="checkMenu"><i id="icons" class="fas fa-bars"></i></label>
+                <ul class="listeMenu">
+                    <li class="choixMenu"><a href="#sectionPresentation" rel="external nofollow">Accueil</a></li>
+                    <li class="choixMenu"><a href="#sectionPortfolio" rel="external nofollow">Projets</a></li>
+                    <li class="choixMenu"><a href="#sectionPropos" class="aPropos" rel="external nofollow">À propos</a>
+                    </li>
+                    <li class="choixMenu"><a href="#sectionCollab" rel="external nofollow">Contacter</a></li>
+                </ul>
+                <div class="icones">
+                    <a target="_blank" href="https://www.linkedin.com/in/gabriel-lev-lem/" title="Linkedin"
+                        rel="external nofollow"><i id="iconLin" class="fab fa-linkedin"></i></a>
+                    <a target="_blank" href="https://www.behance.net/gabriel_lev_lem" title="Behance"
+                        rel="external nofollow"><i id="iconBe" class="fab fa-behance"></i></a>
+                    <a target="_blank" href="https://twitter.com/LemoyneLevesque" title="Twitter"
+                        rel="external nofollow"><i id="iconTwit" class="fab fa-twitter"></i></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="scrolling">
+        <section class="sectionPresentation" id="sectionPresentation">
+            <div class="texteIntro">
+                <h4>Bienvenue, je suis <span id="texteNom">Gabriel Lévesque-Lemoyne</span>. Un intégrateur multimédia
+                    basé à Montréal.</h4>
             </div>
-          </nav>
-        </header>
-    </div>    
-        <main class="scrolling">
+            <p>Je réalise des <span class="texteEcrit"></span>
+                <span class="curseur">&nbsp;</span>
+            </p>
+        </section>
 
-            <section class="sectionPresentation" id="sectionPresentation">
-                <div class="texteIntro">
-                <h4>Bienvenue, je suis <span id="texteNom">Gabriel Lévesque-Lemoyne</span>. Un intégrateur multimédia basé à Montréal.</h4>
-                </div>
-                <p>Je réalise des <span class="texteEcrit"></span>
-                    <span class="curseur">&nbsp;</span>
-                </p>
-            </section>
+        <section class="sectionPortfolio" id="sectionPortfolio">
+            <h4 id="titrePortfolio">Portfolio</h4>
+            <p>Voici mes réalisations</p>
+            <div id="categorieProjet">
+                <button class="btn active" onclick="filterSelection('all')">Tout</button>
+                <button class="btn" onclick="filterSelection('contenu3D')">Contenu 3D</button>
+                <button class="btn" onclick="filterSelection('jeuxVideo')">Jeux vidéo</button>
+                <button class="btn" onclick="filterSelection('design')">Design</button>
+            </div>
 
-            <section class="sectionPortfolio" id="sectionPortfolio">
-                <h4 id="titrePortfolio">Portfolio</h4>
-                <p>Voici mes réalisations</p>
-                <div id="categorieProjet">
-                    <button class="btn active" onclick="filterSelection('all')">Tout</button>
-                    <button class="btn" onclick="filterSelection('contenu3D')">Contenu 3D</button>
-                    <button class="btn" onclick="filterSelection('jeuxVideo')">Jeux vidéo</button>
-                    <button class="btn" onclick="filterSelection('design')">Design</button>
-                </div>
-                <div class="projets">
-                    <div class="column contenu3D">
-                        <div class="contenu">
-                            <img src="img/ennemis3D.jpg" alt="Ennemis 3D">
-                            <div class="contenuTexte"> 
-                                <div class="texte"><p>Projet 3D ennemis : Chaos Castle</p><a target="_blank" href="https://www.behance.net/gallery/91337461/Projet-3D-ennemis-Chaos-Castle" title="Behance">
-                                <p id="texteLien">Voir plus</p></a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column jeuxVideo">
-                        <div class="contenu">
-                            <img src="img/alien.jpg" alt="Alien">
-                            <div class="contenuTexte"> 
-                                <div class="texte"><p>Alien</p><a target="_blank" href="https://www.behance.net/gallery/92121565/Alien-%28Jeu-vido-2D%29" title="Behance">
-                                <p id="texteLien">Voir plus</p></a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column jeuxVideo">
-                        <div class="contenu">
-                            <img data-src="img/virus.jpg" alt="Virus" class="lazy">
-                            <div class="contenuTexte"> 
-                                <div class="texte"><p>Virus</p><a target="_blank" href="https://www.behance.net/gallery/92578657/VIRUS-Projet-tudiant" title="Behance">
-                                <p id="texteLien">Voir plus</p></a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column jeuxVideo">
-                        <div class="contenu">
-                            <img data-src="img/chaosCastle.jpg" alt="Chaos Castle" class="lazy">
-                            <div class="contenuTexte"> 
-                                <div class="texte"><p>Chaos Castle</p><a target="_blank" href="https://www.behance.net/gallery/93009545/Chaos-Castle-%28Jeu%29" title="Behance">
-                                <p id="texteLien">Voir plus</p></a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column design">
-                        <div class="contenu">
-                            <img data-src="img/carteBlanche.jpg" alt="Carte Blanche" class="lazy">
-                            <div class="contenuTexte"> 
-                                <div class="texte"><p>Carte Blanche</p><a target="_blank" href="https://www.behance.net/gallery/91808103/Web-design-Restaurant" title="Behance">
-                                <p id="texteLien">Voir plus</p></a></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="column design">
-                        <div class="contenu">
-                            <img data-src="img/mdj.jpg" alt="Maison de jeunes" class="lazy">
-                            <div class="contenuTexte"> 
-                                <div class="texte"><p>MDJ de Saint-Léonard</p><a target="_blank" href="https://www.behance.net/gallery/91328133/Web-design-Maison-de-jeunes" title="Behance">
-                                <p id="texteLien">Voir plus</p></a></div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="column design">
-                        <div class="contenu">
-                            <img data-src="img/showreel.jpg" alt="Showreel" class="lazy">
-                            <div class="contenuTexte"> 
-                                <div class="texte"><p>Showreel</p><a target="_blank" href="https://www.behance.net/gallery/92579609/Showreel-Gabriel-Lvesque-Lemoyne-2020" title="Behance">
-                                <p id="texteLien">Voir plus</p></a></div>
-                            </div>
-                        </div>
-                    </div>
-                   
-                    <div class="column design">
-                        <div class="contenu">
-                            <img data-src="img/logo.jpg" alt="Logo" class="lazy">
-                            <div class="contenuTexte"> 
-                                <div class="texte"><p>Logo</p><a target="_blank" href="https://www.behance.net/gallery/91811547/Animation-logo-personnel" title="Behance">
-                                <p id="texteLien">Voir plus</p></a></div>
+            <div class="projets">
+                <div class="column contenu3D">
+                    <div class="contenu">
+                        <img src="img/ennemis3D.jpg" alt="Ennemis3D">
+                        <div class="contenuTexte">
+                            <div class="texte">
+                                <p>Projet 3D ennemis : Chaos Castle</p>
+                                <a target="_blank"
+                                    href="https://www.behance.net/gallery/91337461/Projet-3D-ennemis-Chaos-Castle"
+                                    title="Behance" rel="external nofollow">
+                                    <p id="texteLien">Voir plus</p>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
 
-            <section class="sectionPropos" id="sectionPropos">
-                <h4 id="titrePortfolio">À propos</h4>
-                <div class="contenuPropos">
-                    <div class="contenuGabriel">
-                        <img data-src="img/gabriel.png" alt="Moi" class="lazy" id="ImgGab">
-                        <h4 id="textGabriel">Gabriel Lévesque-Lemoyne</h4>
+                <div class="column jeuxVideo">
+                    <div class="contenu">
+                        <img src="img/alien.jpg" alt="Alien">
+                        <div class="contenuTexte">
+                            <div class="texte">
+                                <p>Alien</p>
+                                <a target="_blank"
+                                    href="https://www.behance.net/gallery/92121565/Alien-%28Jeu-vido-2D%29"
+                                    title="Behance" rel="external nofollow">
+                                    <p id="texteLien">Voir plus</p>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="contenuProposTexte"> 
+                </div>
+
+                <div class="column jeuxVideo">
+                    <div class="contenu">
+                        <img data-src="img/virus.jpg" alt="Virus" class="lazy">
+                        <div class="contenuTexte">
+                            <div class="texte">
+                                <p>Virus</p><a target="_blank"
+                                    href="https://www.behance.net/gallery/92578657/VIRUS-Projet-tudiant" title="Behance"
+                                    rel="external nofollow">
+                                    <p id="texteLien">Voir plus</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column jeuxVideo">
+                    <div class="contenu">
+                        <img data-src="img/chaosCastle.jpg" alt="Chaos Castle" class="lazy">
+                        <div class="contenuTexte">
+                            <div class="texte">
+                                <p>Chaos Castle</p><a target="_blank"
+                                    href="https://www.behance.net/gallery/93009545/Chaos-Castle-%28Jeu%29"
+                                    title="Behance" rel="external nofollow">
+                                    <p id="texteLien">Voir plus</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column design">
+                    <div class="contenu">
+                        <img data-src="img/carteBlanche.jpg" alt="Carte Blanche" class="lazy">
+                        <div class="contenuTexte">
+                            <div class="texte">
+                                <p>Carte Blanche</p><a target="_blank"
+                                    href="https://www.behance.net/gallery/91808103/Web-design-Restaurant"
+                                    title="Behance" rel="external nofollow">
+                                    <p id="texteLien">Voir plus</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column design">
+                    <div class="contenu">
+                        <img data-src="img/mdj.jpg" alt="Maison de jeunes" class="lazy">
+                        <div class="contenuTexte">
+                            <div class="texte">
+                                <p>MDJ de Saint-Léonard</p><a target="_blank"
+                                    href="https://www.behance.net/gallery/91328133/Web-design-Maison-de-jeunes"
+                                    title="Behance" rel="external nofollow">
+                                    <p id="texteLien">Voir plus</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column design">
+                    <div class="contenu">
+                        <img data-src="img/showreel.jpg" alt="Showreel Gabriel Lévesque-Lemoyne" class="lazy">
+                        <div class="contenuTexte">
+                            <div class="texte">
+                                <p>Showreel</p><a target="_blank"
+                                    href="https://www.behance.net/gallery/92579609/Showreel-Gabriel-Lvesque-Lemoyne-2020"
+                                    title="Behance" rel="external nofollow">
+                                    <p id="texteLien">Voir plus</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column design">
+                    <div class="contenu">
+                        <img data-src="img/logo.jpg" alt="Logo Gabriel Lévesque-Lemoyne" class="lazy">
+                        <div class="contenuTexte">
+                            <div class="texte">
+                                <p>Logo</p><a target="_blank"
+                                    href="https://www.behance.net/gallery/91811547/Animation-logo-personnel"
+                                    title="Behance" rel="external nofollow">
+                                    <p id="texteLien">Voir plus</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="sectionPropos" id="sectionPropos">
+            <h4 id="titrePortfolio">À propos</h4>
+            <div class="contenuPropos">
+                <div class="contenuGabriel">
+                    <img data-src="img/gabriel.png" alt="Moi" class="lazy" id="ImgGab">
+                    <h4 id="textGabriel">Gabriel Lévesque-Lemoyne</h4>
+                </div>
+                <div class="contenuProposTexte">
                     <p class="textePropos">
-                    Je suis un finissant du programme techniques d'intégration multimédia au Collège de Maisonneuve. 
-                    Un passionné par le développement de jeux vidéo, d'interfaces UI/UX et la création de contenus 3D.
+                        Je suis un finissant du programme techniques d'intégration multimédia au Collège de Maisonneuve.
+                        Un passionné par le développement de jeux vidéo, d'interfaces UI/UX et la création de contenus
+                        3D.
                     </p>
                     <p class="textePropos">
-                    J'apprécie le processus de collaboration pour arriver à des objectifs visés.
+                        J'apprécie le processus de collaboration pour arriver à des objectifs visés.
                     </p>
                     <p class="textePropos">
-                    Je suis ouvert à de nouvelles expériences enrichissantes qui me permettront de réaliser
-                    des projets ambitieux. N'hésitez pas à me contacter pour en savoir plus.
+                        Je suis ouvert à de nouvelles expériences enrichissantes qui me permettront de réaliser
+                        des projets ambitieux. N'hésitez pas à me contacter pour en savoir plus.
                     </p>
-                    </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section class="sectionCollab" id="sectionCollab">
-                <div class="collaboration">
-                    <h4>Collaborons !</h4>
-                    <a target="_self" href="mailto:gabriel.levesque.lemoyne@hotmail.com" title="Adresse courriel">
+        <section class="sectionCollab" id="sectionCollab">
+            <div class="collaboration">
+                <h4>Collaborons !</h4>
+                <a target="_self" href="mailto:gabriel.levesque.lemoyne@hotmail.com" title="Adresse courriel"
+                    rel="external nofollow">
                     <h4 id="adresseCourriel">gabriel.levesque.lemoyne @hotmail.com</h4>
-                    </a>
-                </div>
-            </section>
+                </a>
+            </div>
+        </section>
+        
         <footer>
             <section class="sectionFooter" id="sectionFooter">
-                <a target="_blank" href="https://www.linkedin.com/in/gabriel-lev-lem/" title="Linkedin" class="iconFooter"><i id="iconLin" class="fab fa-linkedin"></i></a>
-                <a target="_blank" href="https://www.behance.net/gabriel_lev_lem" title="Behance" class="iconFooter"><i id="iconBe" class="fab fa-behance"></i></a>
-                <a target="_blank" href="https://twitter.com/LemoyneLevesque" title="Twitter" class="iconFooter"><i id="iconTwit" class="fab fa-twitter"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/in/gabriel-lev-lem/" title="Linkedin"
+                    class="iconFooter" rel="external nofollow"><i id="iconLin" class="fab fa-linkedin"></i></a>
+                <a target="_blank" href="https://www.behance.net/gabriel_lev_lem" title="Behance" class="iconFooter"
+                    rel="external nofollow"><i id="iconBe" class="fab fa-behance"></i></a>
+                <a target="_blank" href="https://twitter.com/LemoyneLevesque" title="Twitter" class="iconFooter"
+                    rel="external nofollow"><i id="iconTwit" class="fab fa-twitter"></i></a>
             </section>
             <h4 id="footerAuteur"><i class="far fa-copyright"></i> Gabriel Lévesque-Lemoyne</h4>
         </footer>
+
     </main>
-<script>
-     (function() { //IIFE
+    
+    <script>
+        (function () { //IIFE
             var leCheckBox = document.querySelector("nav input");
             var lesBoutons = document.querySelectorAll(".menu li");
             var nbBoutons = lesBoutons.length;
 
             for (var i = 0; i < nbBoutons; i++) {
-                lesBoutons[i].addEventListener("click", function() {
+                lesBoutons[i].addEventListener("click", function () {
                     console.log(leCheckBox.checked);
                     leCheckBox.checked = false;
                 }, false);
             }
         })(); //Fin IIFE
-</script>
-<script src="https://kit.fontawesome.com/5134b43bb4.js" crossorigin="anonymous"></script>
-<script src="js/animationTxt.js"></script>
-<script src="js/projetsFiltre.js"></script>
-<script src="js/imgLoadingLazy.js"></script>
+    </script>
+    <script src="https://kit.fontawesome.com/5134b43bb4.js" crossorigin="anonymous"></script>
+    <script src="js/animationTxt.js"></script>
+    <script src="js/projetsFiltre.js"></script>
+    <script src="js/imgLoadingLazy.js"></script>
 </body>
+
 </html>

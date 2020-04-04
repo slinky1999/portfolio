@@ -1,48 +1,50 @@
 .sectionPortfolio {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    background-color: white;
-    font-family: myriad-pro, sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    width: 100vw;
-    height: auto;
-    margin: auto;
-    z-index: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: white;
+  font-family: myriad-pro, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  width: 100vw;
+  height: auto;
+  margin: auto;
+  z-index: auto;
 }
 
 #titrePortfolio {
-    font-size: calc(1.2em + 1vw);
-    padding-top: 100px;
+  font-size: calc(1.2em + 1vw);
+  padding-top: 100px;
 }
-  
-  .projets:after {
-    content: "";
-    display: flex;
-    clear: both;
-   }
 
-    /* Add padding BETWEEN each column */
-  .projets,
-  .projets > .column {
-    padding: 5px;
-  }
+.projets:after {
+  content: "";
+  display: flex;
+  clear: both;
+}
+
+/* Add padding BETWEEN each column */
+.projets,
+.projets>.column {
+  padding: 5px;
+}
 
 .column {
-    float: left;
-    width: 100%;
-    height: auto;
-    display: none; /* Hide all elements by default */
-  }
+  float: left;
+  width: 100%;
+  height: auto;
+  display: none;
+  /* Hide all elements by default */
+}
 
 .contenu {
   position: relative;
-   margin: 50px auto;
-   width: 70%;
-   height: 100%;
-   overflow: hidden; /* [1.2] Hide the overflowing of child elements */
-  }
+  margin: 50px auto;
+  width: 70%;
+  height: 100%;
+  overflow: hidden;
+  /* [1.2] Hide the overflowing of child elements */
+}
 
 /* [2] Transition property for smooth transformation of images */
 .contenu img {
@@ -57,17 +59,17 @@
 
 /* The "show" class is added to the filtered elements */
 .show {
-    display: block;
-  }
+  display: block;
+}
 
 .btn {
-    border: none;
-    outline: none;
-    background-color: none;
-    cursor: pointer;
-    font-size: calc(0.5em + 1vw);
-    position: relative;
-    
+  border: none;
+  outline: none;
+  background-color: none;
+  cursor: pointer;
+  font-size: calc(0.5em + 1vw);
+  position: relative;
+
 }
 
 img {
@@ -77,105 +79,107 @@ img {
 }
 
 .btn:hover {
-    text-decoration: underline;
-    color:#3c2194;
-    transition: 0.5s;
-  }
-  
-  .btn.active {
-    background-color: none;
-    color: none;
-  }
+  text-decoration: underline;
+  color: #3c2194;
+  transition: 0.5s;
+}
 
-  .contenu:hover .texteProjet {
-    opacity: 1;
-  }
+.btn.active {
+  background-color: none;
+  color: none;
+}
 
-  .contenu:hover img {
-    transform: scale(1.2);
-  }
+.contenu:hover .texteProjet {
+  opacity: 1;
+}
 
-  .contenu:hover .contenuTexte {
-    text-align: center;
-    opacity: 0.7;
-    top: 0%;
-    left: 0%;
-  }
+.contenu:hover img {
+  transform: scale(1.2);
+}
 
-  .contenuTexte {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: black;
-    white-space: pre-wrap;
-  }
+.contenu:hover .contenuTexte {
+  text-align: center;
+  opacity: 0.7;
+  top: 0%;
+  left: 0%;
+}
 
-  .texte {
-    display: block;
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
+.contenuTexte {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: black;
+  white-space: pre-wrap;
+}
 
-  }
+.texte {
+  display: block;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 
-  #texteLien {
-    display: block;
-    position: absolute;
-    text-decoration: underline;
-    white-space: nowrap;
-    font-size: 15px;
-    top: 70%;
-    left: 30%;
-    text-align: center;
-  }
+}
 
-   /*Styles tablette*/
+#texteLien {
+  display: block;
+  position: absolute;
+  text-decoration: underline;
+  white-space: nowrap;
+  font-size: 15px;
+  top: 70%;
+  left: 30%;
+  text-align: center;
+}
+
+/*Styles tablette*/
 @media (min-width:541px) and (max-width:1199px) {
 
 
-.column {
-  width: 50%;
+  .column {
+    width: 50%;
   }
 
-.contenu {
-   max-width: 60%;
-  
+  .contenu {
+    max-width: 60%;
+
   }
 
   img {
     max-width: 100%;
   }
-  
-    }
-    /*Styles Grand-écran */
-   @media (min-width:1200px) {
+
+}
+
+/*Styles Grand-écran */
+@media (min-width:1200px) {
+
   /* Add padding BETWEEN each column */
   .projets,
-  .projets > .column {
-    
+  .projets>.column {
+
     margin-left: 5vw;
   }
 
   .column {
     width: 40%;
-    
+
   }
 
-.contenu {
-  max-width: 70%;
-  height: 70%;
+  .contenu {
+    max-width: 70%;
+    height: 70%;
 
   }
 
@@ -183,4 +187,4 @@ img {
     width: 100%;
   }
 
-   }
+}

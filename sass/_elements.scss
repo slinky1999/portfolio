@@ -1,84 +1,84 @@
-*{
-    
+* {
+
   box-sizing: border-box;
-   
+
 }
 
 html {
-    
-    scroll-snap-type: y proximity;
-    scroll-behavior: smooth;
-    margin: auto;
-    overflow-x: hidden;
-    overflow-y: scroll;
- }
 
- section {
-    display: flex;
-    scroll-snap-align: start;
-    font-size: 2em;
-    z-index: -1;
- }
-
- .scrolling {
-    
-    display: block;
-   
-
- }
-
- .sectionCollab{
-    
-    color: white;
-    background-color: #1a191d;
-    height: 50vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    text-align: center;
-    font-family: myriad-pro, sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    
- }
-
- .sectionPropos{
-    
-   color: black;
-   background-color: #e1d5d5;
-   height: auto;
-   width: 100vw;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   align-content: center;
-   text-align: center;
-   font-family: myriad-pro, sans-serif;
-   font-weight: 700;
-   font-style: normal;
-   
+  scroll-snap-type: y proximity;
+  scroll-behavior: smooth;
+  margin: auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
-.contenuPropos{
-   display: flex;
-   flex-direction: column;
-   margin: auto;
- }
+section {
+  display: flex;
+  scroll-snap-align: start;
+  font-size: 2em;
+  z-index: -1;
+}
 
-.contenuProposTexte{
-   font-size: calc(0.6em + 1vw);
-   text-align: left;
-   height: auto;
-   font-style: italic;
-   margin: 50px;
- }
- 
+.scrolling {
 
- #adresseCourriel{
-  cursor: pointer;  
+  display: block;
+
+
+}
+
+.sectionCollab {
+
+  color: white;
+  background-color: #1a191d;
+  height: 50vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  font-family: myriad-pro, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+
+}
+
+.sectionPropos {
+
+  color: black;
+  background-color: #e1d5d5;
+  height: auto;
+  width: 100vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  font-family: myriad-pro, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+
+}
+
+.contenuPropos {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.contenuProposTexte {
+  font-size: calc(0.6em + 1vw);
+  text-align: left;
+  height: auto;
+  font-style: italic;
+  margin: 50px;
+}
+
+
+#adresseCourriel {
+  cursor: pointer;
   font-style: italic;
   font-size: 0.8em;
   text-decoration: underline;
@@ -89,70 +89,71 @@ html {
 }
 
 #ImgGab {
-   
-   width: 50%;
-   margin:auto;
- }
 
- #textGabriel {
-   
-   font-size: calc(0.8em + 1vw);
- }
-
-
-   /*Styles tablette*/
-   @media (min-width:541px) and (max-width:1199px) {
-
-      .contenuProposTexte{
-         
-         margin: 70px;
-       }
-       
-
-}
-   /*Styles Grand-écran */
-   @media (min-width:1200px) {
-    
- .sectionPropos{
-    
-   color: black;
-   background-color: #e1d5d5;
-   height: auto;
-   width: 100vw;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   align-content: center;
-   text-align: center;
-   font-family: myriad-pro, sans-serif;
-   font-weight: 700;
-   font-style: normal;
-   
+  width: 50%;
+  margin: auto;
 }
 
-.contenuProposTexte{
-         
-   margin: 70px;
- }
+#textGabriel {
 
-.contenuPropos{
-   display: flex;
-   flex-direction: row;
-   margin: auto;
- }
+  font-size: calc(0.8em + 1vw);
+}
 
- #ImgGab {
-   
-   width: 100%;
-   margin:auto;
- }
 
- .contenuGabriel {
-   
-   width: 150%;
-   margin:auto;
-   margin: 200px;
-   
- }
+/*Styles tablette*/
+@media (min-width:541px) and (max-width:1199px) {
+
+  .contenuProposTexte {
+
+    margin: 70px;
+  }
+
+
+}
+
+/*Styles Grand-écran */
+@media (min-width:1200px) {
+
+  .sectionPropos {
+
+    color: black;
+    background-color: #e1d5d5;
+    height: auto;
+    width: 100vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    font-family: myriad-pro, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+
+  }
+
+  .contenuProposTexte {
+
+    margin: 70px;
+  }
+
+  .contenuPropos {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+  }
+
+  #ImgGab {
+
+    width: 100%;
+    margin: auto;
+  }
+
+  .contenuGabriel {
+
+    width: 150%;
+    margin: auto;
+    margin: 200px;
+
+  }
 
 }
