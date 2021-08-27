@@ -35,7 +35,7 @@ scene.add(camera);
 // cube.position.set(5,5,5);
 // renderer.render(scene, camera);
 
-/***** add lights ****/
+/***** add light ****/
 scene.background = new THREE.Color(0X1f2836);
 const ambientLight = new THREE.AmbientLight(0xFFFFE0, 0.6);
 const frontLight = new THREE.PointLight(0xFFFFE0, 2);
