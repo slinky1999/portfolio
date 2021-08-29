@@ -56,128 +56,8 @@
                 <button class="btn" onclick="filterSelection('design')">Design</button>
             </div>
 
-            <div class="projets">
-                <div class="column contenu3D">
-                    <div class="contenu">
-                        <img src="img/ennemis3D.jpg" alt="Ennemis3D">
-                        <div class="contenuTexte">
-                            <div class="texte">
-                                <p>Projet 3D ennemis : Chaos Castle</p>
-                                <a target="_blank"
-                                    href="https://www.behance.net/gallery/91337461/Projet-3D-ennemis-Chaos-Castle"
-                                    title="Behance" rel="external nofollow">
-                                    <p id="texteLien">Voir plus</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="column jeuxVideo">
-                    <div class="contenu">
-                        <img src="img/alien.jpg" alt="Alien">
-                        <div class="contenuTexte">
-                            <div class="texte">
-                                <p>Alien</p>
-                                <a target="_blank"
-                                    href="https://www.behance.net/gallery/92121565/Alien-%28Jeu-vido-2D%29"
-                                    title="Behance" rel="external nofollow">
-                                    <p id="texteLien">Voir plus</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="column jeuxVideo">
-                    <div class="contenu">
-                        <img data-src="img/virus.jpg" alt="Virus" class="lazy">
-                        <div class="contenuTexte">
-                            <div class="texte">
-                                <p>Virus</p><a target="_blank"
-                                    href="https://www.behance.net/gallery/92578657/VIRUS-Projet-tudiant" title="Behance"
-                                    rel="external nofollow">
-                                    <p id="texteLien">Voir plus</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="column jeuxVideo">
-                    <div class="contenu">
-                        <img data-src="img/chaosCastle.jpg" alt="Chaos Castle" class="lazy">
-                        <div class="contenuTexte">
-                            <div class="texte">
-                                <p>Chaos Castle</p><a target="_blank"
-                                    href="https://www.behance.net/gallery/93009545/Chaos-Castle-%28Jeu%29"
-                                    title="Behance" rel="external nofollow">
-                                    <p id="texteLien">Voir plus</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="column design">
-                    <div class="contenu">
-                        <img data-src="img/carteBlanche.jpg" alt="Carte Blanche" class="lazy">
-                        <div class="contenuTexte">
-                            <div class="texte">
-                                <p>Carte Blanche</p><a target="_blank"
-                                    href="https://www.behance.net/gallery/91808103/Web-design-Restaurant"
-                                    title="Behance" rel="external nofollow">
-                                    <p id="texteLien">Voir plus</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="column design">
-                    <div class="contenu">
-                        <img data-src="img/mdj.jpg" alt="Maison de jeunes" class="lazy">
-                        <div class="contenuTexte">
-                            <div class="texte">
-                                <p>MDJ de Saint-Léonard</p><a target="_blank"
-                                    href="https://www.behance.net/gallery/91328133/Web-design-Maison-de-jeunes"
-                                    title="Behance" rel="external nofollow">
-                                    <p id="texteLien">Voir plus</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="column design">
-                    <div class="contenu">
-                        <img data-src="img/showreel.jpg" alt="Showreel Gabriel Lévesque-Lemoyne" class="lazy">
-                        <div class="contenuTexte">
-                            <div class="texte">
-                                <p>Showreel</p><a target="_blank"
-                                    href="https://www.behance.net/gallery/92579609/Showreel-Gabriel-Lvesque-Lemoyne-2020"
-                                    title="Behance" rel="external nofollow">
-                                    <p id="texteLien">Voir plus</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="column design">
-                    <div class="contenu">
-                        <img data-src="img/logo.jpg" alt="Logo Gabriel Lévesque-Lemoyne" class="lazy">
-                        <div class="contenuTexte">
-                            <div class="texte">
-                                <p>Logo</p><a target="_blank"
-                                    href="https://www.behance.net/gallery/91811547/Animation-logo-personnel"
-                                    title="Behance" rel="external nofollow">
-                                    <p id="texteLien">Voir plus</p>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="projets-conteneur">
+                <!-- génère les projets dynamiquement -->
             </div>
         </section>
 
@@ -229,6 +109,11 @@
 
     </main>
 
+    <script src="https://kit.fontawesome.com/5134b43bb4.js" crossorigin="anonymous"></script>
+    <script src="js/animationTxt.js"></script>
+    <script src="js/projetsFiltre.js"></script>
+    <script src="js/imgLoadingLazy.js"></script>
+    <script src="js/projets.js"></script>
     <script>
         (function () { //IIFE
             var leCheckBox = document.querySelector("nav input");
@@ -242,11 +127,29 @@
                 }, false);
             }
         })(); //Fin IIFE
+
+        const projetConteneur = document.querySelector('.projets-conteneur');
+
+        projets.forEach(projet => {
+            projetConteneur.innerHTML += `
+            <div class="${projet.section}">
+                <div class="contenu">
+                    <img data-src="img/${projet.image}" alt="${projet.tag}" class="lazy">
+                    <div class="contenuTexte">
+                        <div class="texte">
+                            <p>${projet.titre}</p><a target="_blank"
+                                href="https://www.behance.net/gallery/91811547/Animation-logo-personnel"
+                                title="Behance" rel="external nofollow">
+                                <p id="texteLien">Voir plus</p>
+                            </a>
+                        </div>
+                     </div>
+                </div>
+            </div>
+            `;   
+        });
+       
     </script>
-    <script src="https://kit.fontawesome.com/5134b43bb4.js" crossorigin="anonymous"></script>
-    <script src="js/animationTxt.js"></script>
-    <script src="js/projetsFiltre.js"></script>
-    <script src="js/imgLoadingLazy.js"></script>
 </body>
 
 </html>

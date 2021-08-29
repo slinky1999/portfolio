@@ -17,15 +17,15 @@
   padding-top: 100px;
 }
 
-.projets:after {
+.projets-conteneur:after {
   content: "";
   display: flex;
   clear: both;
 }
 
 /* Add padding BETWEEN each column */
-.projets,
-.projets>.column {
+.projets-conteneur,
+.projets-conteneur>.column {
   padding: 5px;
 }
 
@@ -166,8 +166,8 @@ img {
 @media (min-width:1200px) {
 
   /* Add padding BETWEEN each column */
-  .projets,
-  .projets>.column {
+  .projets-conteneur,
+  .projets-conteneur>.column {
 
     margin-left: 5vw;
   }

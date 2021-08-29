@@ -53,7 +53,7 @@ scene.add(ambientLight, frontLight, backLight);
 
 /***** Load model champignon ****/
 const loaderOBJ = new GLTFLoader().setPath('../models/');
-loaderOBJ.load('champignonTextureTESTING.glb', function(gltf){
+loaderOBJ.load('champignon.glb', function(gltf){
   
     scene.add(gltf.scene);  
     renderer.render(scene, camera);
